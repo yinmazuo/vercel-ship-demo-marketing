@@ -1,0 +1,182 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe6;
+  --ink: #1d1b17;
+  --card: rgba(255, 255, 255, 0.7);
+  --accent: #c4552b;
+  --accent-soft: #f6cbbd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(circle at top left, #fff4d6 0%, transparent 40%),
+    linear-gradient(135deg, #f4efe6 0%, #f4d4c8 100%);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.announcement {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: rgba(29, 27, 23, 0.08);
+}
+
+.announcement p,
+.announcement strong {
+  margin: 0;
+}
+
+.status {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.status.ok {
+  background: rgba(48, 133, 91, 0.14);
+}
+
+.status.warn {
+  background: rgba(196, 85, 43, 0.16);
+}
+
+.hero {
+  display: grid;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(29, 27, 23, 0.08);
+  border-radius: 28px;
+  background: var(--card);
+  backdrop-filter: blur(14px);
+}
+
+.hero span,
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  color: rgba(29, 27, 23, 0.65);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+  margin: 0;
+}
+
+.hero p {
+  max-width: 42rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button.primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button.secondary {
+  border: 1px solid rgba(29, 27, 23, 0.15);
+  color: var(--ink);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.story-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(29, 27, 23, 0.08);
+}
+
+.spotlight h2,
+.config-card h2,
+.roadmap h2 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.stack {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.roadmap {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(29, 27, 23, 0.08);
+}
+
+.roadmap ol {
+  margin: 16px 0 0;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.error {
+  color: #8f2f11;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .story-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .announcement {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
